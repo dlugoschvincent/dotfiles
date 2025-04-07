@@ -1,0 +1,114 @@
+* {
+  font-family: "0xProtoNerdFont", "Font Awesome 6 Free";
+  font-size: 16px;
+  font-feature-settings: "tnum";
+}
+
+window#waybar {
+  border-left: 1px solid #27a1b9;
+  border-top: 1px solid #27a1b9;
+  border-bottom: 1px solid #27a1b9;
+  border-radius: 4px 0 0 4px;
+  background: rgba(26, 27, 38, 0.999);
+  color: #c0caf5;
+}
+
+window {
+  background: transparent;
+}
+
+button {
+  box-shadow: none;
+  border: none;
+  border-left: 1px solid #27a1b9;
+  border-radius: 0;
+  transition-property: none;
+}
+
+button:hover {
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+  border-left: 1px solid #27a1b9;
+  -gtk-icon-effect: none;
+  -gtk-icon-shadow: none;
+}
+
+tooltip {
+  background: #1a1b26;
+  border: 1px solid #27a1b9;
+}
+
+tooltip label {
+  color: #c0caf5;
+}
+
+#workspaces button {
+  padding: 0 0;
+  color: #c0caf5;
+}
+
+#workspaces button:hover {
+  background: #313244;
+}
+
+#workspaces button.active {
+  background: #585b70;
+}
+
+#workspaces button.urgent {
+  background: #f7768e;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#tray {
+  color: #c0caf5;
+  padding: 8px 8px;
+  background: transparent;
+}
+
+#battery {
+  border-left: 1px solid #27a1b9;
+  border-bottom: 1px solid #27a1b9;
+  border-radius: 0 0 0 4px;
+}
+
+#battery.charging,
+#battery.plugged {
+  background: #9ece6a;
+  color: #000000;
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+    color: #c0caf5;
+  }
+}
+#battery.warning:not(.charging) {
+  background: #e0af68;
+  color: #000000;
+}
+
+#battery.critical:not(.charging) {
+  background: #f7768e;
+  color: #000000;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: steps(8);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background: #000000;
+}
+
+#network.wifi {
+  margin-left: -8px;
+}
