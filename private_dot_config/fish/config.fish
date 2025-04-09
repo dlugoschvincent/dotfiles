@@ -7,22 +7,16 @@ if status is-interactive
     set fish_vi_force_cursor 1
     set -gx TERMINAL wezterm
 
-    # bun
-    export BUN_INSTALL="$HOME/.bun"
-    export PATH="$BUN_INSTALL/bin:$PATH"
-    export PATH="$HOME/.cargo/bin:$PATH"
-    export PATH="$HOME/.local/bin:$PATH"
-    export PATH="$HOME/go/bin:$PATH"
-    export PATH="$PATH:/home/vdlugosch-zalf/.dotnet/tools"
-    export PATH="$PATH:/home/vdlugosch-zalf/zalf-rpm/mas_csharp/lib/capnproto-dotnetcore/capnpc-csharp/bin/Release/net9.0"
-    export PATH="$PATH:/home/vdlugosch-zalf/minio-binaries"
+    
+
+    
 
     # Setup atuin 
     atuin init fish | source
-
     # Setup zoxide
     zoxide init fish | source
 
+    # Setup keychain
     if status is-login
         keychain --eval --quiet ~/.ssh/id_ed25519 | source
     end
@@ -38,8 +32,6 @@ if status is-interactive
     alias cat="bat"
 
     alias du="dust"
-
-  
 end
 
 function fish_user_key_bindings

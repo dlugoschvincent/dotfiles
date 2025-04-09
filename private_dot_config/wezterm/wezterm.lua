@@ -55,11 +55,11 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	}
 end)
 
-config.char_select_font = wezterm.font("0xProto Nerd Font")
-config.char_select_font_size = 12.0
-
-config.command_palette_font = wezterm.font("0xProto Nerd Font")
-config.command_palette_font_size = 12.0
+-- config.char_select_font = wezterm.font("0xProto Nerd Font")
+-- config.char_select_font_size = 12.0
+--
+-- config.command_palette_font = wezterm.font("0xProto Nerd Font")
+-- config.command_palette_font_size = 12.0
 
 config.font = wezterm.font("0xProto Nerd Font")
 config.font_size = 12.0
