@@ -246,6 +246,13 @@ environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 26
+    hide-when-typing
+    hide-after-inactive-ms 3000
+}
+
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
