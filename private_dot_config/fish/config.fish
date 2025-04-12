@@ -1,11 +1,10 @@
 if status is-interactive
-    set -gx EDITOR nvim
+    fish_config theme choose tokyonight_night 
     set -g fish_greeting
     # Setup vim key bindings
     set -g fish_key_bindings fish_vi_key_bindings
     set fish_cursor_insert line
     set fish_vi_force_cursor 1
-    set -gx TERMINAL wezterm
 
     
 
@@ -21,9 +20,8 @@ if status is-interactive
         keychain --eval --quiet ~/.ssh/id_ed25519 | source
     end
 
-    # alias
+    # Alias for eza
     alias ls='eza --icons --hyperlink'
-
     alias l='eza --icons --hyperlink -l'
     alias ll='eza --icons --hyperlink -lh'
     alias la='eza --icons --hyperlink -la'
